@@ -9,7 +9,12 @@ import DashboardLayout from "./components/dashboard/DashboardLayout";
 import DashboardOverview from "./pages/DashboardOverview";
 import DashboardSettings from "./pages/DashboardSettings";
 import DashboardCompliance from "./pages/DashboardCompliance";
-import PlaceholderPage from "./pages/PlaceholderPage";
+import DashboardCollections from "./pages/DashboardCollections";
+import DashboardEscrow from "./pages/DashboardEscrow";
+import DashboardConditions from "./pages/DashboardConditions";
+import DashboardDisbursement from "./pages/DashboardDisbursement";
+import DashboardReports from "./pages/DashboardReports";
+import DashboardSupport from "./pages/DashboardSupport";
 
 const queryClient = new QueryClient();
 
@@ -49,7 +54,7 @@ const App = () => (
             path="/dashboard/collections"
             element={
               <DashboardLayout>
-                <PlaceholderPage title="Collections API" />
+                <DashboardCollections />
               </DashboardLayout>
             }
           />
@@ -57,7 +62,7 @@ const App = () => (
             path="/dashboard/escrow"
             element={
               <DashboardLayout>
-                <PlaceholderPage title="Escrow / Hold" />
+                <DashboardEscrow />
               </DashboardLayout>
             }
           />
@@ -65,7 +70,7 @@ const App = () => (
             path="/dashboard/conditions"
             element={
               <DashboardLayout>
-                <PlaceholderPage title="Conditions" />
+                <DashboardConditions />
               </DashboardLayout>
             }
           />
@@ -73,7 +78,7 @@ const App = () => (
             path="/dashboard/disbursement"
             element={
               <DashboardLayout>
-                <PlaceholderPage title="Disbursement" />
+                <DashboardDisbursement />
               </DashboardLayout>
             }
           />
@@ -81,7 +86,7 @@ const App = () => (
             path="/dashboard/reports"
             element={
               <DashboardLayout>
-                <PlaceholderPage title="Reports" />
+                <DashboardReports />
               </DashboardLayout>
             }
           />
@@ -89,7 +94,7 @@ const App = () => (
             path="/dashboard/support"
             element={
               <DashboardLayout>
-                <PlaceholderPage title="Support" />
+                <DashboardSupport />
               </DashboardLayout>
             }
           />

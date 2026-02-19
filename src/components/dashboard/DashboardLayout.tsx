@@ -25,6 +25,7 @@ import {
   MessageSquare,
   Menu,
 } from "lucide-react";
+import { useAccount } from "@/hooks/useAccount";
 
 const overviewItems = [
   { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
@@ -50,6 +51,8 @@ interface DashboardLayoutProps {
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   const location = useLocation();
+  const { data: account } = useAccount();
+  const businessName = account?.business_name || "Dashboard";
 
   return (
     <SidebarProvider>
@@ -175,7 +178,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                 <Menu className="w-5 h-5" />
               </SidebarTrigger>
               <span className="font-display font-bold text-[15px] text-white">
-                Good morning, KaziHub 👋
+                Good morning, {businessName} 👋
               </span>
             </div>
             <div className="flex items-center gap-3">

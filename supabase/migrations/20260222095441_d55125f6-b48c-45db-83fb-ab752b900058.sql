@@ -1,0 +1,6 @@
+
+ALTER TABLE public.transactions
+ADD COLUMN IF NOT EXISTS redirect_url TEXT,
+ADD COLUMN IF NOT EXISTS cancel_url TEXT,
+ADD COLUMN IF NOT EXISTS merchant_name TEXT,
+ADD COLUMN IF NOT EXISTS checkout_url TEXT;

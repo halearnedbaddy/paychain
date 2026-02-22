@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         display: ["Syne", "sans-serif"],
-        body: ["DM Sans", "sans-serif"],
+        body: ["General Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
